@@ -1,0 +1,138 @@
+.container {
+    display: flex;
+    justify-content: center;
+    /*the container class contains both the main grid 
+    and the mini grid, and setting the display to flex allows 
+    these two grids to sit side by side, providing the UI format
+    we want*/
+}
+
+.grid {
+    width: 200px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.829);
+    /*flex box (layout technique) is used here to make the div
+    elements inside the grid to stack over 
+    each other in the 10x20 grid, not appear on a 
+    new line and extend below the grid*/
+    display: flex;
+    flex-wrap: wrap;
+    border-style: solid;
+    border-color: rgb(59, 114, 167);
+    border-width: 5px;
+}
+
+.grid div {
+    height: 20px;
+    width: 20px;
+}
+
+.mini-grid {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.829);
+    margin-left: 50px;
+    /*the styling applied to the 4x4 grid that 
+    displays the upcoming tetriomino; separate from 
+    the main game grid*/
+    border-style: solid;
+    border-color: rgb(59, 114, 167);
+    border-width: 5px;
+}
+
+.mini-grid div {
+    width: 20px;
+    height: 20px;
+}
+
+body {
+    background-image: linear-gradient(to top, rgb(0, 0, 61), rgb(50, 50, 167));
+    background-repeat: repeat-x;
+    height: 100vh;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 20px;
+    border-color: rgb(35, 15, 105);
+    
+}
+
+h3 {
+    color: white;
+    text-align: center;
+    font-family: tahoma;
+    margin-bottom: 3px;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-family: tahoma;
+    font-size: 40px;
+    padding: 10px;
+    background-color: rgba(14, 8, 65, 0.829);
+    margin-left: 25%;
+    margin-right: 25%;
+    border-radius: 27px;
+}
+
+button {
+    position: relative;
+    left: calc(50% - 80px);
+    width: 100px;    
+    margin: 25px;
+    border-radius: 26px;
+    height: 25px;
+    background-color: rgb(144, 144, 255);
+    color: white;
+    font-family: tahoma;
+
+}
+
+button:hover {
+   background-color: rgb(101, 199, 255);
+}
+
+#t1 {
+    color: red;
+}
+
+#e {
+    color: orange;
+}
+
+#t2 {
+    color: yellow;
+}
+
+#r {
+    color: rgb(0, 231, 0);
+}
+
+#i {
+    color: rgb(62, 216, 255);
+}
+
+#s {
+    color: rgb(253, 52, 253);
+}
+
+p {
+    color: white;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 6%;
+    font-family: tahoma;
+}
+
+#stars {
+    height: 100%;
+    width: 100%;
+    background-image: url("space.jpeg");
+    position: absolute;
+    z-index: -7;
+    opacity: 0.2;
+    background-repeat: repeat;
+}
